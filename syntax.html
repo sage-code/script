@@ -1,0 +1,281 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta name="description" content="Short overview of JavaScript syntax.">
+  <meta name="author" content="Elucian Moise">
+  <meta name="keywords" content="javascript, syntax, overview">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Website title -->
+  <title>JS Syntax</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <!-- Icon -->
+  <link rel="icon" type="image/png"  href="../images/favicon.ico">
+  <!-- Prism Highlighter -->
+  <link rel="stylesheet" href="../prism.css">
+  <script src="../prism.js"></script>
+  <script src="js/test.js"></script>
+  <!-- custom css -->
+  <link rel="stylesheet" href="../sage.css">
+  </head>
+<body>
+
+<div class="container">
+
+<!-- header -->
+<div class="row">
+    <div class="col">
+        <a href="https://sagecode.net"><img src="../images/sage-logo.svg" alt="Sage-Code Laboratory" height="80"/></a>
+    </div>
+    <div class="col bottom-right">
+        <a href="index.html#js-bookmark">index</a>&lt;--
+    </div>
+</div>
+
+
+<hr>
+
+<h2>JavaScript Syntax</h2>
+
+<div class="alert alert-secondary shadow-sm">JavaScript syntax is derived from C. It uses the same comments and is a curly bracket language. Some symbols and operators are borrowed from C. However it has different keywords and semantic.In this chapter we present a general overview. Let's get started with an example.
+</div>
+
+<h4>Example:</h4>
+
+This is an HTML fragment containing JavaScript code:
+
+<pre><code class="language-javascript line-numbers">&lt;script&gt;
+   /* a simple JavaScript program
+      to demonstrate basic syntax features */
+   let greeting = "Hello, World!";
+   document.write(greeting); //output
+&lt;/script&gt;</code></pre>
+
+<h4>Notes:</h4>
+<ol>
+<li>After &lt;script&gt; tag that belongs actually to XHTML you can observe the second and third and forth lines, separated by symbols: /* &hellip; */. This is called a "block" comment. It is the same as C comment.You can use block comments to outline a region of code.
+</li>
+<li>Second form of comment is using two symbols: "//". This is called single line comment, and the same symbol can be used to create end of line comments.</li>
+<li>In JavaScript a line of code should end with semi-column. ";".
+However many times this symbol is optional. JavaScript is forgiving, and will infer the end of statement for you.</li>
+<li>Can you spot the variable declaration? It is done using "let" keyword followed by operator "=" and a string literal "Hello, Worlds!", that is enclosed in double quotes. The variable is therefore a string in this case. Java do not require explicit type declarations.</li>
+</ol>
+
+<p><b>Details:</b></p>
+<ul>
+<li>JavaScript syntax is using short English words, combination of words or abbreviations; </li>
+<li>JavaScript is free form, case sensitive language; </li>
+<li>Name of classes are usually starting with uppercase letters like: Array, Map, Set; </li>
+<li>Usually the keywords and function names are lowercase;</li>
+</ul>
+
+<h2>Keywords:</h2>
+<p>JavaScript may have been started as a small language but now it has 64 keywords, and this is not at all small any longer. Also is more difficult to master than it use to be.</p>
+
+<table class="table table-sm table-dark">
+<tr><td>abstract</td><td>arguments</td><td>await*</td><td>boolean</td></tr>
+<tr><td>break</td><td>byte</td><td>case</td><td>catch</td></tr>
+<tr><td>char</td><td>class*</td><td>const</td><td>continue</td></tr>
+<tr><td>debugger</td><td>default</td><td>delete</td><td>do</td></tr>
+<tr><td>double</td><td>else</td><td>enum*</td><td>eval</td></tr>
+<tr><td>export*</td><td>extends*</td><td>false</td><td>final</td></tr>
+<tr><td>finally</td><td>float</td><td>for</td><td>function</td></tr>
+<tr><td>goto</td><td>if</td><td>implements</td><td>import*</td></tr>
+<tr><td>in</td><td>instanceof</td><td>int</td><td>interface</td></tr>
+<tr><td>let*</td><td>long</td><td>native</td><td>new</td></tr>
+<tr><td>null</td><td>package</td><td>private</td><td>protected</td></tr>
+<tr><td>public</td><td>return</td><td>short</td><td>static</td></tr>
+<tr><td>super*</td><td>switch</td><td>synchronized</td><td>this</td></tr>
+<tr><td>throw</td><td>throws</td><td>transient</td><td>true</td></tr>
+<tr><td>try</td><td>typeof</td><td>var</td><td>void</td></tr>
+<tr><td>volatile</td><td>while</td><td>with</td><td>yield</tr>
+</table>
+
+<h2>Expressions</h2>
+
+<p>One expression is an enumeration of identifiers and literal constants separated by operators and separators. An expression can be evaluated in JavaScript console. Larger expressions can be created using smaller expressions that are enclosed in round parenthesis.Expressions can be captured into variables using "=" that is assign operator.</p>
+
+<pre><code class="language-javascript line-numbers">/* Examples of expressions: */
+(6+12)/3                  //a numeric expression
+a =  (1+1)                //assign result of expression (1+1) to a variable
+a >= 2                    //Boolean logic expression (true)
+b = a == 2                //Capture Boolean expression (a == 2)
+"this was" +"  "+"a test" //string expression
+</code></pre>
+
+<p><b>Homework: </b>
+Open JavaScript console (Shift+Ctrl+J) and create the expressions one by one as they are presented in the example above.I have run this homework using Chrome browser console and I have captured the screen so you can do it to and have the same results:
+</p>
+
+<div align="center">
+    <img src="img/console.png" class="image img-fluid protect rounded shadow" alt="Responsive Image"/>
+    <p>Chrome JavaScript Console</p>
+</div>
+
+<h2>Statements</h2>
+
+<p> JavaScript is a structured language. That means its syntax is based on statements. A statement represents one or more lines of code.One JavaScript subprogram or script can have one or more statements.Statements are created using keywords, operators, expressions and separators.There are many kind of statements: declarations, assignments, function calls ... etc.
+</p>
+
+<h4>Example:</h4>
+
+<p>In the example below we show you a special statement that is called: anonymous block.    It start with separator "{" that marks the beginning of the block and it ends with separator:"}" that marks the end of the block. This notation is specific to all curly-based languages.</p>
+
+<pre><code class="language-javascript line-numbers">{
+  /* single line statements */
+  let a = 10, b = 20;
+  console.log(a+b);
+
+  /* nested anonymous block*/
+  {
+     let c = 30;
+     console.log(c);
+  }
+}</code></pre>
+
+<h4>Notes:</h4>
+<ul>
+   <li>This block encapsulate (contain) two other single line statements;</li>
+   <li>Statements can be indented using equal number of spaces;</li>
+   <li>Space indentation is optional but useful for improved readability.</li>
+   <li>Statements can be separated using optional ";" at the end of each statement.
+</ul>
+
+<h2>Ternary expressions</h2>
+
+<p>A ternary expression is an intelligent expression that makes a decision and calculate one result or another depending on condition value. Remember a logical condition can use relation operators or logical operators to create a boolean response.</p>
+
+<h4>Syntax:</h4>
+<pre><code class="language-javascript line-numbers">condition ? first_expression : second_expression;
+</code></pre>
+
+<b>Notes:</b>
+<ul>
+<li>The conditional operator “?” is the ternary operator used for ternary expressions;</li>
+<li>when condition is true, first_expression is calculated as result;</li>
+<li>when condition is false, second_expression is calculated as result;</li>
+</ul>
+
+<h4>Example:</h4>
+
+<p>In next example we create a function: draw(). A function is a block of code that has a named can be executed multiple times. We explain later in details how to make functions in JavaScript.In this example focus on conditional assignment, that use ternary operator "?" to make a ternary expression.
+</p>
+
+<pre><code class="language-javascript line-numbers">/* function that return random (0,1) */
+function draw() {
+/* generate a number between 0 and 1*/
+   let x = Math.random();
+/* conditional assignment */
+   let y = x &gt; 0.5 ? 1: 0;
+   return String(y);
+}
+// call draw() function several times
+console.log(draw()+draw()+draw()); //010
+console.log(draw()+draw()+draw()); //110
+</code></pre>
+
+<h2>Conditional chain</h2>
+
+<p>The ternary operator is right-associative, which means it can be chained.Most developers do not use conditional chains and prefer to use nested "if" statements.Therefore we do not insist on chains.Next fragment is not real code but a "design pattern" that look like code (pseudo-code).
+</p>
+
+<pre><code class="language-javascript line-numbers">function example(&hellip;) {
+ return condition1 ? expression1:
+ condition2 ? expression2:
+ condition3 ? expression3:
+ default_expression;
+}</code></pre>
+
+<h4>Notes:</h4>
+<ul>
+<li>If condition1 is true the condition2 and condition3 are not executed,</li>
+<li>If no condition is true, the last expression is executed,</li>
+<li>Result can be captured using return or assignment.</li>
+</ul>
+
+<h2>Debugging Code</h2>
+
+<p> During development, you run your JavaScript code often to find errors. This process is called debugging. A "bug" in programming is not an insect but an unexpected situation called "error" or "bug". To find them you need to test your code multiple times.</p>
+
+<p><b>Logical errors:&nbsp;</b>The most common technique to find JavaScript errors is to introduce a "spy". This is a line of code that display a message to console that you can investigate.If the message produce unexpected output, you are about to find an unexpected logical error.
+</p>
+
+<p><b>Syntax errors:&nbsp;</b>These errors are produced during runtime. Your code execute until a syntax error is encountered. Then the program is stopping its execution and you can read a usually red message about the error. For these kind of errors you do not need to create a "spy" statement.</p>
+
+<p><b>Step by step:&nbsp;</b>Sometimes the error is difficult to find. The last resort is to run a script step by step. This require to set a "breakpoint". This is not a script element it is a location (a statement number) that is flagged by the IDE with a red dot. When your script reach that specific point, it will suspend.</p>
+
+<p><b>Inspection:&nbsp;</b>
+You can inspect values of variables (in scope) using using special window that can show the objects and the values from memory. After the inspection you can press a button and the script can resume running one step at a time or it can run up to next "breakpoint" depending on the button you use.</p>
+
+<h4>Example:</h4>
+
+<pre><code class="language-javascript line-numbers">/*spy demo*/
+{ let x = 5, y = 10;
+  console.log(x,y) //first spy
+  x++
+  y++
+  console.log(x,y) //second spy
+  x++
+  y++
+  /* better output */
+  console.log("x = ",x)
+  console.log("y = ",y)
+}
+</code></pre>
+
+<p><b>Chrome debugger: </b>You can debug JavaScript in Chrome.Sometimes your script is preloaded when you visit a web page.If your code is stored as a script file, you can load the script using Chrome browser and debug it by following these steps:
+</p>
+
+<b>Chrome debug in console.</b>
+
+<ol>
+<li>Hit the F12 key or Ctrl+Shift+I;</li>
+<li>Select the Scripts , or Sources tab;</li>
+<li>Select "js/test.js" script from the tree;</li>
+<li>Add a breakpoints by clicking on the line number;</li>
+<li>Click this link to execute: <a href="javascript:test();">test()</a></li>
+<li>Use F11 to run step by step.</li>
+<li>Click Console tab to see the messages.</li>
+</ol>
+<hr>
+<div align="center">
+    <img src="img/debug.jpg" class="image img-fluid protect rounded shadow" alt="Responsive Image"/>
+    <p>Chrome Console Source</p>
+</div>
+
+<hr>
+<b>Firefox debug in console.</b>
+
+<ol>
+<li>Hit the F12 key or Ctrl+Shift+I;</li>
+<li>Select the Debugger tab;</li>
+<li>Select "js/test.js" script from the tree;</li>
+<li>Add a breakpoints by clicking on the line number;</li>
+<li>Click this link to execute: <a href="javascript:test();">test()</a></li>
+<li>Use F11 to run step by step.</li>
+<li>Click Console tab to see the messages.</li>
+</ol>
+
+<div align="center">
+    <img src="img/debugger.jpg" class="image img-fluid protect rounded shadow" alt="Responsive Image"/>
+    <p>Firefox Console Debugger</p>
+</div>
+
+<p>There are much more to be explained about JavaScript syntax. However, we prefer to stop here and continue with other topics.Bookmark this page and visit later for updates. I will review this page to add more topics about syntax after I do all chapters.</p>
+<hr>
+
+<p><b>Read next:</b>
+<a href="https://sagecode.net/javascript/variables.html">Variables</a></p>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-copyright text-center"></div>
+</footer>
+
+
+</div>
+
+
+</body>
+</html>
